@@ -5,7 +5,7 @@ package com.gjj.designPattern.demo.decorator;
  * @author lenovo
  *
  */
-public class YangGuo extends Swordsman{
+public class YangGuo extends AbstractSwordsman{
 
 	@Override
 	public void attackMagic() {

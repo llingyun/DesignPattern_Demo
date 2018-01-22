@@ -7,7 +7,7 @@ package com.gjj.designPattern.demo.decorator;
  */
 public class OYangFeng extends Master {
 
-	public OYangFeng(Swordsman swordsman) {
+	public OYangFeng(AbstractSwordsman swordsman) {
 		super(swordsman);
 	}
 	

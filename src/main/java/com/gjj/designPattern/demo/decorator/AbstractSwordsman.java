@@ -5,7 +5,7 @@ package com.gjj.designPattern.demo.decorator;
  * @author lenovo
  *
  */
-public abstract class Swordsman {
+public abstract class AbstractSwordsman {
 	
 	public abstract void attackMagic();
 

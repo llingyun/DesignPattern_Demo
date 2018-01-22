@@ -5,11 +5,11 @@ package com.gjj.designPattern.demo.decorator;
  * @author lenovo
  *
  */
-public class Master extends Swordsman {
+public class Master extends AbstractSwordsman {
 
-	private Swordsman swordsman;
+	private AbstractSwordsman swordsman;
 	
-	public Master(Swordsman swordsman) {
+	public Master(AbstractSwordsman swordsman) {
 		this.swordsman = swordsman;
 	}
 	

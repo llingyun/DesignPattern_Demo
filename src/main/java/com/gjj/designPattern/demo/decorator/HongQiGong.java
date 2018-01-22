@@ -7,7 +7,7 @@ package com.gjj.designPattern.demo.decorator;
  */
 public class HongQiGong extends Master {
 
-	public HongQiGong(Swordsman swordsman) {
+	public HongQiGong(AbstractSwordsman swordsman) {
 		super(swordsman);
 		
 	}
