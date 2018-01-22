@@ -1,5 +1,10 @@
 package com.gjj.designPattern.demo.builder;
 
+/**
+ * 指挥者类
+ * @author lenovo
+ *
+ */
 public class Director {
 
 	Builder mBuilder = null;
