@@ -18,7 +18,11 @@ public class test4 {
 		json.stream().forEach(e  -> System.out.println(e));
 		
 		 List<String> list = new ArrayList<>();
-		System.out.println(list.stream().findFirst().orElse(null));
+	//	System.out.println(list.stream().findFirst().orElse(null));
+		
+		String hh = "a,b,,c";
+		String [] chuan = hh.split(",");
+		System.out.println(chuan.length);
 	}
 
 }
