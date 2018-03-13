@@ -13,18 +13,21 @@ public class test3 {
 		List<Apple> appleList = new ArrayList<>();// 存放apple对象集合
 
 		Apple apple1 = new Apple(1, "苹果1", new BigDecimal("3.25"), 10);
-		Apple apple2 = new Apple(2, "香蕉", new BigDecimal("2.89"), 30);
+		Apple apple2 = new Apple(20, "香蕉", new BigDecimal("2.89"), 30);
 		Apple apple3 = new Apple(3, "荔枝", new BigDecimal("9.99"), 10);
 		Apple apple4 = new Apple(4, "苹果2", new BigDecimal("1.35"), 10);
 		appleList.add(apple1);
 		appleList.add(apple2);
 		appleList.add(apple3);
 		appleList.add(apple4);
-		 Map<Integer,String> map1 =
+		/* Map<Integer,String> map1 =
 		 appleList.stream().collect(Collectors.toMap(e ->e.getId(), e ->
 		 e.getName()));
-		BigDecimal totalMoney = appleList.stream().map(Apple::getMoney).reduce(BigDecimal.ZERO, BigDecimal::add);
+		BigDecimal totalMoney = appleList.stream().map(Apple::getMoney).reduce(BigDecimal.ZERO, BigDecimal::add);*/
+		Map<Integer, Apple> map11 = appleList.stream().collect(Collectors.toMap(Apple :: getId, e -> e));
 		Map<Integer, List<Apple>> map = appleList.stream().collect(Collectors.groupingBy(Apple::getNum));
+		//List<Apple> hh = appleList.parallelStream().sorted(comparing(Apple :: getId).reversed()).collect(Collectors.toList());
+		List<Apple> personList2 = appleList.stream().sorted((p1, p2) -> p1.getId().compareTo(p2.getId())).collect(Collectors.toList());
 		List<BigDecimal> money = map.values().stream()
 				.map(e -> e.stream().map(Apple::getMoney).reduce(BigDecimal.ZERO, BigDecimal::add))
 				.collect(Collectors.toList());
@@ -34,7 +37,7 @@ public class test3 {
 		Map<Boolean, String> nnn = new HashMap<>();
 		nnn.put(true, "hxjcd");
 		nnn.put(true, "hdjfsd");
-		System.out.println(map1);
+		System.out.println(personList2);
 	}
 
 }
