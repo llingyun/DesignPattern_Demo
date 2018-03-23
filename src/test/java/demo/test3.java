@@ -28,6 +28,14 @@ public class test3 {
 		Map<Integer, List<Apple>> map = appleList.stream().collect(Collectors.groupingBy(Apple::getNum));
 		//List<Apple> hh = appleList.parallelStream().sorted(comparing(Apple :: getId).reversed()).collect(Collectors.toList());
 		List<Apple> personList2 = appleList.stream().sorted((p1, p2) -> p1.getId().compareTo(p2.getId())).collect(Collectors.toList());
+		List<BigDecimal> personList3 = appleList.stream().map(e -> e.getMoney()).collect(Collectors.toList());
+		for(BigDecimal mm : personList3) {
+			System.out.println("*******" + mm + "*****");
+		}
+		Map<String, String> mapaa = new HashMap<>();
+		mapaa.put("2", "asa");
+		mapaa.put("6", "sdfasdsa");
+		System.out.println(mapaa.get("3"));
 		List<BigDecimal> money = map.values().stream()
 				.map(e -> e.stream().map(Apple::getMoney).reduce(BigDecimal.ZERO, BigDecimal::add))
 				.collect(Collectors.toList());
@@ -37,7 +45,7 @@ public class test3 {
 		Map<Boolean, String> nnn = new HashMap<>();
 		nnn.put(true, "hxjcd");
 		nnn.put(true, "hdjfsd");
-		System.out.println(personList2);
+		//System.out.println(personList2);
 	}
 
 }
