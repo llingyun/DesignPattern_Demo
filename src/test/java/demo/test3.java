@@ -20,7 +20,9 @@ public class test3 {
 		appleList.add(apple2);
 		appleList.add(apple3);
 		appleList.add(apple4);
-		 Map<Integer,String> map1 =
+		List<Apple> ll = appleList.stream().map(e -> {e.setId(e.getId() -1); return e;}).collect(Collectors.toList());
+		System.out.println(ll); 
+		Map<Integer,String> map1 =
 		 appleList.stream().collect(Collectors.toMap(e ->e.getId(), e ->
 		 e.getName()));
 		BigDecimal totalMoney = appleList.stream().map(Apple::getMoney).reduce(BigDecimal.ZERO, BigDecimal::add);
@@ -34,7 +36,11 @@ public class test3 {
 		Map<Boolean, String> nnn = new HashMap<>();
 		nnn.put(true, "hxjcd");
 		nnn.put(true, "hdjfsd");
-		System.out.println(map1);
+		Map<String, String> map2 = new HashMap<>();
+		map2.put("1", "苹果1");
+		map2.put("2", "香蕉1");
+		map2.put("3", "荔枝1");
+		System.out.println(map2.toString());
 	}
 
 }
