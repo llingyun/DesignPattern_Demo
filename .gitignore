@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ##ignore this file##
 /target/ 
 
@@ -11,3 +12,6 @@
 ##class file##
 *.com  
 *.class  
+=======
+/target/
+>>>>>>> 150c8c778fd5b2b33345b1d831c3e64a1b042cab

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Manifest-Version: 1.0
 Implementation-Title: demo1
 Implementation-Version: 0.0.1-SNAPSHOT
@@ -8,3 +9,15 @@ Implementation-URL: http://projects.spring.io/spring-boot/ppp/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
 
+=======
+Manifest-Version: 1.0
+Implementation-Title: demo1
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Administrator
+Implementation-Vendor-Id: com.jy
+Build-Jdk: 1.8.0_152
+Implementation-URL: http://projects.spring.io/spring-boot/ppp/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
+>>>>>>> 150c8c778fd5b2b33345b1d831c3e64a1b042cab

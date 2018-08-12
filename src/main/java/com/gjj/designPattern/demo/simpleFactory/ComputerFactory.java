@@ -2,7 +2,7 @@ package com.gjj.designPattern.demo.simpleFactory;
 
 public interface ComputerFactory {
 	
-	public static Computer createComputer(String type) {
+	 static Computer createComputer(String type) {
 		  Computer mComputer=null;
 	        switch (type) {
 	            case "lenovo":
