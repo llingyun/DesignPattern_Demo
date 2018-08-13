@@ -3,16 +3,16 @@ package com.gjj.designPattern.demo.simpleFactory;
 public interface ComputerFactory {
 	
 	 static Computer createComputer(String type) {
-		  Computer mComputer=null;
+		  Computer mComputer = null;
 	        switch (type) {
 	            case "lenovo":
-	                mComputer=new LenovoComputer();
+	                mComputer = new LenovoComputer();
 	               break;
 	            case "hp":
-	                mComputer=new HpComputer();
+	                mComputer = new HpComputer();
 	                break;
 	            case "asus":
-	                mComputer=new AsusComputer();
+	                mComputer = new AsusComputer();
 	                break;
 
 	        }
